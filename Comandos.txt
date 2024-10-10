@@ -1,0 +1,27 @@
+Install nestjs
+npm i - g @nestjs/cli
+
+installConfig
+npm i --save @nestjs/config typeorm pg @nestjs/typeorm
+
+
+Create project
+nest new "NOME PROJETO"
+
+Stat Project 
+yarn run start:dev
+
+Docker
+Create
+docker pull postgres
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
+
+
+Create Controller nestjs
+nest g controller "NameController"
+nest g module "NameModule"
+nest g service "NameService"
+
+Dependencies 
+yarn add bcrypt
+yarn add -D @types/bcrypt

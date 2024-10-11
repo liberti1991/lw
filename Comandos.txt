@@ -25,3 +25,6 @@ nest g service "NameService"
 Dependencies 
 yarn add bcrypt
 yarn add -D @types/bcrypt
+
+Migrations
+npx typeorm migration:create ./src/migration/"nome"

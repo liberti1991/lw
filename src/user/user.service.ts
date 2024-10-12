@@ -13,7 +13,6 @@ export class UserService {
     private readonly userRepository: Repository<UserEntity>,
   ) { }
 
-
   async createUser(createUserDto: CreateUserDto): Promise<UserEntity> {
     const saltOrRounds = 10;
 
@@ -27,6 +26,15 @@ export class UserService {
       typeUser: 1,
       password: passwordHashed,
     });
+  }
+
+  async getUserByIdUsingRelations(userId: number): Promise<UserEntity> {
+    return this.userRepository.findOne({
+      where: {
+        id: userId,
+      },
+      relations: ['addresses'],
+    })
   }
 
   async getAllUser(): Promise<UserEntity[]> {
@@ -45,5 +53,6 @@ export class UserService {
 
     return user
   }
+
 }
 

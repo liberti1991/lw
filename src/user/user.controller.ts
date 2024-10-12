@@ -26,5 +26,6 @@ export class UserController {
     return new ReturnUserDto(
       await this.userService.getUserByIdUsingRelations(userId),
     );
+    // return this.userService.getUserByIdUsingRelations(userId)
   }
 }

@@ -13,4 +13,12 @@ export class CityService {
   async getAllCity(): Promise<CityEntity[]> {
     return this.cityRepository.find();
   }
+
+  async getAllCitiesByStateId(stateId: number): Promise<CityEntity[]> {
+    return this.cityRepository.find({
+      where: {
+        stateId
+      }
+    });
+  }
 }

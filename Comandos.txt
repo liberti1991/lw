@@ -10,6 +10,8 @@ npm i --save class-validator class-transformerX
 Authentication 
 npm i --save @nestjs/passport passport-local
 npm i --save-dev @types/passport-local
+npm i --save @nestjs/jwt passport-jwt
+npm i --save-dev @types/passport-jwt
 
 Create project
 nest new "NOME PROJETO"

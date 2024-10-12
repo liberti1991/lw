@@ -4,6 +4,8 @@ npm i - g @nestjs/cli
 installConfig
 npm i --save @nestjs/config typeorm pg @nestjs/typeorm
 
+installValidation
+npm i --save class-validator class-transformer
 
 Create project
 nest new "NOME PROJETO"

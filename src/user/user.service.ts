@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { BadGatewayException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { hash } from 'bcrypt';
 import { Repository } from 'typeorm';
@@ -18,8 +18,13 @@ export class UserService {
 
     const passwordHashed = await hash(createUserDto.password, saltOrRounds)
 
-    console.log('passwordHashed', passwordHashed);
+    const verifyEmail = await this.findUserByEmail(createUserDto.email).catch(
+      () => undefined,
+    );
 
+    if (verifyEmail) {
+      throw new BadGatewayException('E-mail já cadastrado no sistema.')
+    }
 
     return this.userRepository.save({
       ...createUserDto,

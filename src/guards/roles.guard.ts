@@ -3,7 +3,7 @@ import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { JwtService } from '@nestjs/jwt';
 import { LoginPayload } from 'src/auth/dtos/loginPayload.dto';
-import { ROLES_KEY } from 'src/decorator/roles.decorators';
+import { ROLES_KEY } from 'src/decorator/roles.decorator';
 import { UserType } from 'src/user/enum/userType.enum';
 
 @Injectable()

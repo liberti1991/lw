@@ -5,7 +5,11 @@ installConfig
 npm i --save @nestjs/config typeorm pg @nestjs/typeorm
 
 installValidation
-npm i --save class-validator class-transformer
+npm i --save class-validator class-transformerX
+
+Authentication 
+npm i --save @nestjs/passport passport-local
+npm i --save-dev @types/passport-local
 
 Create project
 nest new "NOME PROJETO"

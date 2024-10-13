@@ -19,6 +19,10 @@ nest new "NOME PROJETO"
 Stat Project 
 yarn run start:dev
 
+TestUnity
+yarn run test src/"PASTA"/__tests__/"NOME".service.spec.ts
+yarn run test src/user/__tests__/user.service.spec.ts
+
 Docker
 Create
 docker pull postgres

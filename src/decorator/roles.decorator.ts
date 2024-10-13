@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { SetMetadata } from '@nestjs/common';
-import { UserType } from 'src/user/enum/userType.enum';
+import { UserType } from '../user/enum/userType.enum';
 
 export const ROLES_KEY = 'roles';
 

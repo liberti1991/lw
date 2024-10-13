@@ -2,7 +2,7 @@ import { UserModule } from './../user/user.module';
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { CityModule } from 'src/city/city.module';
+import { CityModule } from '../city/city.module';
 import { AddressController } from './address.controller';
 import { AddressService } from './address.service';
 import { AddressEntity } from './entities/address.entity';

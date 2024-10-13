@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { ReturnAddressDto } from 'src/address/dtos/returnAddress.dto';
+import { ReturnAddressDto } from '../../address/dtos/returnAddress.dto';
 import { UserEntity } from '../entities/user.entity';
 
 export class ReturnUserDto {

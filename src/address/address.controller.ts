@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { Body, Controller, Post, UsePipes, ValidationPipe } from '@nestjs/common';
-import { Roles } from 'src/decorator/roles.decorator';
-import { UserId } from 'src/decorator/userId.decorator';
-import { UserType } from 'src/user/enum/userType.enum';
+import { Roles } from '../decorator/roles.decorator';
+import { UserId } from '../decorator/userId.decorator';
+import { UserType } from '../user/enum/userType.enum';
 import { AddressService } from './address.service';
 import { CreateAddressDto } from './dtos/createAddress.dto';
 import { AddressEntity } from './entities/address.entity';

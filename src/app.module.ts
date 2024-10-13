@@ -11,6 +11,8 @@ import { CityModule } from './city/city.module';
 import { RolesGuard } from './guards/roles.guard';
 import { StateModule } from './state/state.module';
 import { UserModule } from './user/user.module';
+import { CategoryModule } from './category/category.module';
+import { ProductModule } from './product/product.module';
 
 @Module({
   imports: [
@@ -33,7 +35,9 @@ import { UserModule } from './user/user.module';
     CityModule,
     AddressModule,
     AuthModule,
-    JwtModule
+    JwtModule,
+    CategoryModule,
+    ProductModule
   ],
   controllers: [],
   providers: [

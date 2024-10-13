@@ -40,6 +40,6 @@ describe('StateService', () => {
 
   it('should return error in exception', async () => {
     jest.spyOn(stateRepository, 'find').mockRejectedValueOnce(new Error());
-    expect(service.getAllState()).rejects.toThrowError();
+    expect(service.getAllState()).rejects.toThrow();
   });
 });

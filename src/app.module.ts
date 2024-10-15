@@ -7,12 +7,12 @@ import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AddressModule } from './address/address.module';
 import { AuthModule } from './auth/auth.module';
+import { CategoryModule } from './category/category.module';
 import { CityModule } from './city/city.module';
 import { RolesGuard } from './guards/roles.guard';
+import { ProductModule } from './product/product.module';
 import { StateModule } from './state/state.module';
 import { UserModule } from './user/user.module';
-import { CategoryModule } from './category/category.module';
-import { ProductModule } from './product/product.module';
 
 @Module({
   imports: [
@@ -27,7 +27,7 @@ import { ProductModule } from './product/product.module';
       port: Number(process.env.DB_PORT),
       username: process.env.DB_USERNAME,
       entities: [`${__dirname}/**/*.entity{.js,.ts}`],
-      migrations: [`${__dirname}/migration/{.ts,*.js}`],
+      migrations: [`${__dirname}/migration/*{.ts,.js}`],
       migrationsRun: true,
     }),
     UserModule,
